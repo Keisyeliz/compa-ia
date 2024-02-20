@@ -1,16 +1,16 @@
-Algoritmo alg_compa駃a
-	//Una compa耥a dedicada al sector energ閠ico Requiere gestionar los pagos y facturaci髇 de cada cliente Para ello se tiene la siguiente informaci髇 
-	//C骴igo de inmueble 
+Algoritmo alg_compa帽ia
+	//Una compa帽铆a dedicada al sector energ茅tico Requiere gestionar los pagos y facturaci贸n de cada cliente Para ello se tiene la siguiente informaci贸n 
+	//C贸digo de inmueble 
 	//Estrato 
-	//Direcci髇 
+	//Direcci贸n 
 	//Sector 
 	//Nombre de propietario
 	
 	//Para el estrato 1 el valor del kw  600 pesos 
-	//Para 閘 es tracto 2  680 pesos 
+	//Para 茅l es tracto 2  680 pesos 
 	//Estrato 3 800 pesos 
 	//Si la vivienda se encuentra en el sector 1
-	//Tiene un descuento de facturaci髇 del 20%
+	//Tiene un descuento de facturaci贸n del 20%
 	//El sector 2 15 %
 	//El sector 3  5%
 	//Calcular el valor total de la factura teniendo en cuenta la cantidad de kw consumidos al mes
@@ -26,7 +26,7 @@ Algoritmo alg_compa駃a
 	leer var_inmuebleInt
 	Escribir 'ingrese el estracto'
 	leer var_estractoInt
-	Escribir 'ingrese la direcci髇'
+	Escribir 'ingrese la direcci贸n'
 	leer var_direccionInt
 	Escribir 'ingrese el sector'
 	leer var_sectorInt
@@ -50,6 +50,69 @@ Algoritmo alg_compa駃a
 		var_precioInt = var_consumoInt * cons_estracto1Str
 		Escribir 'sin descuento aplicado es   ',var_precioInt
 		Escribir 'el descuento es  ',var_descuentoFlt
+        si var_sectorInt = 1 Entonces
+		var_descuentoFlt = (var_consumoInt * cons_estracto2Str) * 0.20
+		var_precioInt = var_consumoInt * cons_estracto1Str
+		Escribir 'sin descuento aplicado es   ',var_precioInt
+		Escribir 'el descuento es  ',var_descuentoFlt
+		var_totalInt = var_precioInt - var_descuentoFlt
+		Escribir 'su total a pagar es          ',var_totalInt
+	FinSi
+	si var_sectorInt = 1 Entonces
+		var_descuentoFlt = (var_consumoInt * cons_estracto3Str) * 0.20
+		var_precioInt = var_consumoInt * cons_estracto1Str
+		Escribir 'sin descuento aplicado es   ',var_precioInt
+		Escribir 'el descuento es  ',var_descuentoFlt
+		var_totalInt = var_precioInt - var_descuentoFlt
+		Escribir 'su total a pagar es          ',var_totalInt
+	FinSi
+	si var_sectorInt = 2 Entonces
+		var_descuentoFlt = (var_consumoInt * cons_estracto1Str) * 0.15
+		var_precioInt = var_consumoInt * cons_estracto1Str
+		Escribir 'sin descuento aplicado es   ',var_precioInt
+		Escribir 'el descuento es  ',var_descuentoFlt
+		var_totalInt = var_precioInt - var_descuentoFlt
+		Escribir 'su total a pagar es          ',var_totalInt
+	FinSi
+	si var_sectorInt = 2 Entonces
+		var_descuentoFlt = (var_consumoInt * cons_estracto2Str) * 0.15
+		var_precioInt = var_consumoInt * cons_estracto1Str
+		Escribir 'sin descuento aplicado es   ',var_precioInt
+		Escribir 'el descuento es  ',var_descuentoFlt
+		var_totalInt = var_precioInt - var_descuentoFlt
+		Escribir 'su total a pagar es          ',var_totalInt
+	FinSi
+	si var_sectorInt = 2 Entonces
+		var_descuentoFlt = (var_consumoInt * cons_estracto3Str) * 0.15
+		var_precioInt = var_consumoInt * cons_estracto1Str
+		Escribir 'sin descuento aplicado es   ',var_precioInt
+		Escribir 'el descuento es  ',var_descuentoFlt
+		var_totalInt = var_precioInt - var_descuentoFlt
+		Escribir 'su total a pagar es          ',var_totalInt
+	FinSi
+	si var_sectorInt = 3 Entonces
+		var_descuentoFlt = (var_consumoInt * cons_estracto1Str) * 0.05
+		var_precioInt = var_consumoInt * cons_estracto1Str
+		Escribir 'sin descuento aplicado es   ',var_precioInt
+		Escribir 'el descuento es  ',var_descuentoFlt
+		var_totalInt = var_precioInt - var_descuentoFlt
+		Escribir 'su total a pagar es          ',var_totalInt
+	FinSi
+	si var_sectorInt = 3 Entonces
+		var_descuentoFlt = (var_consumoInt * cons_estracto2Str) * 0.05
+		var_precioInt = var_consumoInt * cons_estracto2Str
+		Escribir 'sin descuento aplicado es   ',var_precioInt
+		Escribir 'el descuento es  ',var_descuentoFlt
+		var_totalInt = var_precioInt - var_descuentoFlt
+		Escribir 'su total a pagar es          ',var_totalInt
+	FinSi
+	si var_sectorInt = 3 Entonces
+		var_descuentoFlt = (var_consumoInt * cons_estracto3Str) * 0.05
+		var_precioInt = var_consumoInt * cons_estracto3Str
+		Escribir 'sin descuento aplicado es   ',var_precioInt
+		Escribir 'el descuento es  ',var_descuentoFlt
+		var_totalInt = var_precioInt - var_descuentoFlt
+		Escribir 'su total a pagar es          ',var_totalInt
 	FinSi
 	
 FinAlgoritmo
